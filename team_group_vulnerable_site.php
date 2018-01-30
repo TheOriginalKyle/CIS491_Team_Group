@@ -32,7 +32,7 @@
 						<input type="password" id="password" class="form-control" placeholder="***********" style="width:250px">
 					</div>
 					<div class="form-check">
-						<input class="checkbox" type="checkbox" id="sanatizeCheck">
+						<input class="checkbox" type="checkbox" id="sanatizeCheck" onclick="<?php $cleanMyInput = True ?>">
   					<label class="form-check-label" for="sanatizeCheck">Sanatize Inputs</label>
 					</div>
 					<div class="form-check">
