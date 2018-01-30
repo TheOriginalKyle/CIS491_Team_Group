@@ -33,6 +33,7 @@
 					</div>
 					<div class="form-check">
 						<input class="checkbox" type="checkbox" id="sanatizeCheck">
+>>>>>>> bf83a454ffa3a52a52b82a63da5b765e450fcda4
   					<label class="form-check-label" for="sanatizeCheck">Sanatize Inputs</label>
 					</div>
 					<div class="form-check">
@@ -41,6 +42,7 @@
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary" id="submitBtn" value="">Submit</button>
+>>>>>>> bf83a454ffa3a52a52b82a63da5b765e450fcda4
 					</div>
 				</form>
 			</div>
@@ -70,6 +72,7 @@
 			}elseif($cleanMyInput == true && $_SERVER["REQUEST_METHOD"] != "POST"){
 				echo "Is GET Request!";
 				echo "Sanatizing Input...";
+>>>>>>> bf83a454ffa3a52a52b82a63da5b765e450fcda4
 			}
 
 		 ?>
