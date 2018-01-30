@@ -32,7 +32,7 @@
 						<input type="password" id="password" class="form-control" placeholder="***********" style="width:250px">
 					</div>
 					<div class="form-check">
-						<input class="checkbox" type="checkbox" id="sanatizeCheck" onclick="<?php $cleanMyInput = True ?>">
+						<input class="checkbox" type="checkbox" id="sanatizeCheck" onclick="<?php echo $cleanMyInput = True ?>">
   					<label class="form-check-label" for="sanatizeCheck">Sanatize Inputs</label>
 					</div>
 					<div class="form-check">
@@ -40,7 +40,7 @@
   					<label class="form-check-label" for="postCheck">Resist CSRF</label>
 					</div>
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary" id="submitBtn" value="">Submit</button>
+						<button type="submit" class="btn btn-primary" name="submit">Submit</button>
 					</div>
 				</form>
 			</div>
@@ -60,16 +60,16 @@
 		</script>
 		<?php
 		//This checks if its a post request then begins messing with the data
-			if ($_SERVER["REQUEST_METHOD"] == "POST" && $cleanMyInput == true)
+			if ($_SERVER["REQUEST_METHOD"] == "POST" && $cleanMyInput == True)
 			{
-				echo "Is POST Request!";
-				echo "Sanatizing Input...";
-			}elseif ($_SERVER["REQUEST_METHOD"] == "POST" && $cleanMyInput == false){
-				echo "Is POST Request!";
-				echo "WARNING Input is not sanatized!";
-			}elseif($cleanMyInput == true && $_SERVER["REQUEST_METHOD"] != "POST"){
-				echo "Is GET Request!";
-				echo "Sanatizing Input...";
+				echo "Is POST Request!</br>";
+				echo "Sanatizing Input...</br>";
+			}elseif ($_SERVER["REQUEST_METHOD"] == "POST" && $cleanMyInput == False){
+				echo "Is POST Request!</br>";
+				echo "WARNING Input is not sanatized!</br>";
+			}elseif($cleanMyInput == true && isset($_GET['submit'])){
+				echo "Is GET Request!</br>";
+				echo "Sanatizing Input...</br>";
 			}
 
 		 ?>
